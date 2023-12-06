@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Diagnostics;
 using System.Reflection;
 
 namespace AdventOfCode2023
@@ -29,10 +29,15 @@ namespace AdventOfCode2023
             string inputFilepath = $"Days/Day{day}/input.txt";
             string[] input = File.ReadAllLines(inputFilepath);
 
-            // Call the solution method
+            // Find the solution method
             MethodInfo solutionMethod = dayType.GetMethod("Solution")
                 ?? throw new Exception("Solution method not found!");
+
+            // Call with Timer
+            var stopwatch = Stopwatch.StartNew();
             solutionMethod.Invoke(null, new object[] { input });
+            double elapsed = stopwatch.ElapsedMilliseconds;
+            Console.WriteLine("Elapsed Time: " + (elapsed / 1000).ToString("0.000"));
         }
     }
 }
