@@ -14,19 +14,21 @@ namespace AdventOfCode2023
         static void Main(string[] args)
         {
             // Make sure we passed in a day argument
-            if (args.Length != 1)
+            if (args.Length < 1)
             {
-                Console.WriteLine("Must pass exactly 1 argument!");
+                Console.WriteLine("Must pass at least 1 argument!");
                 return;
             }
             string day = args[0];
+            bool useTestData = args.Length >= 2 && args[1] == "test";
 
             // Make sure the class for that day exists
             Type? dayType = Type.GetType($"AdventOfCode2023.Days.Day{day}")
                 ?? throw new Exception($"No solution exists for day {day}!");
 
             // Read input
-            string inputFilepath = $"Days/Day{day}/input.txt";
+            string inputFile = useTestData ? "test.txt" : "input.txt";
+            string inputFilepath = $"Days/Day{day}/{inputFile}";
             string[] input = File.ReadAllLines(inputFilepath);
 
             // Find the solution method
