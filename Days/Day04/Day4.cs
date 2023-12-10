@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2023.Days;
 
-public static class Day4
+public static class Day04
 {    
     static List<(List<int> winningNumbers, List<int> myNumbers)> ReadCards(string[] input)
     {

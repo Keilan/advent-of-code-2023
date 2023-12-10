@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2023.Days;
 
-public static class Day2
+public static class Day02
 {
     public static void Solution(string[] input)
     {

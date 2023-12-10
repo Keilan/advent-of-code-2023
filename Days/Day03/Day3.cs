@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2023.Days;
 
-public static class Day3
+public static class Day03
 {
     static bool IsPartNumber(int x, int y, List<string> schematic)
     {

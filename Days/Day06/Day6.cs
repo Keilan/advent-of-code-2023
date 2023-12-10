@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2023.Days;
 
-public static class Day6
+public static class Day06
 {
     static List<(int time, int record)> ReadInput(string[] input)
     {

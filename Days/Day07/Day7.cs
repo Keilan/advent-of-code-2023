@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2023.Days;
 
-public static class Day7
+public static class Day07
 {
     public static List<char> CardOrder = ['A', 'K', 'Q', 'T', '9', '8', '7', '6', '5', '4', '3', '2', 'J'];
     public enum HandType

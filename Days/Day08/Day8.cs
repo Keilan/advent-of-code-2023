@@ -2,7 +2,7 @@ using AdventOfCode2023.Utilities;
 
 namespace AdventOfCode2023.Days;
 
-public static class Day8
+public static class Day08
 {
 
 

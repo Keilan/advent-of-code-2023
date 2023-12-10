@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 namespace AdventOfCode2023.Days;
 
-public static class Day9
+public static class Day09
 {
     static List<List<int>> ReadInput(string[] input)
     {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2023.Days;
 
-public static class Day5
+public static class Day05
 {
     static void ReadInput(string[] input, out List<long> seeds, out List<(string, string, List<(long, long, long)>)> almanac)
     {

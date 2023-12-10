@@ -23,12 +23,12 @@ namespace AdventOfCode2023
             bool useTestData = args.Length >= 2 && args[1] == "test";
 
             // Make sure the class for that day exists
-            Type? dayType = Type.GetType($"AdventOfCode2023.Days.Day{day}")
-                ?? throw new Exception($"No solution exists for day {day}!");
+            Type? dayType = Type.GetType($"AdventOfCode2023.Days.Day{day.PadLeft(2, '0')}")
+                ?? throw new Exception($"No solution exists for day {day.PadLeft(2, '0')}!");
 
             // Read input
             string inputFile = useTestData ? "test.txt" : "input.txt";
-            string inputFilepath = $"Days/Day{day}/{inputFile}";
+            string inputFilepath = $"Days/Day{day.PadLeft(2, '0')}/{inputFile}";
             string[] input = File.ReadAllLines(inputFilepath);
 
             // Find the solution method
