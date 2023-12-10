@@ -2,7 +2,8 @@
   "profiles": {
     "advent-of-code-2023": {
       "commandName": "Project",
-      "commandLineArgs": "10 test"
+      "commandLineArgs": "10 test",
+      "workingDirectory": "\\\\wsl.localhost\\Ubuntu-22.04\\home\\keilan\\projects\\advent-of-code-2023\\"
     }
   }
 }
