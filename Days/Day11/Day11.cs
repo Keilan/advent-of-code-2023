@@ -95,16 +95,22 @@ public static class Day11
         {
             for (int j = i+1; j < galaxies.Count; j++)
             {
-                distanceSum += GetManhattenDistance(galaxies[i], galaxies[j], expansionRows, expansionColumns, 1000000);
+                distanceSum += GetManhattenDistance(galaxies[i], galaxies[j], expansionRows, expansionColumns, 2);
             }
         }
 
         Console.WriteLine($"Part 1: {distanceSum}");
 
-        /*        // Print for debugging
-                for (int i = 0; i < image.Count; i++)
-                {
-                    Console.WriteLine(string.Join("", image[i]));
-                }*/
+        distanceSum = 0;
+        for (int i = 0; i < galaxies.Count; i++)
+        {
+            for (int j = i + 1; j < galaxies.Count; j++)
+            {
+                distanceSum += GetManhattenDistance(galaxies[i], galaxies[j], expansionRows, expansionColumns, 1000000);
+            }
+        }
+
+        Console.WriteLine($"Part 2: {distanceSum}");
+
     }
 }
